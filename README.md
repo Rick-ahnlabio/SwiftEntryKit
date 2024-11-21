@@ -897,19 +897,6 @@ Yet, it is pretty easy to integrate SwiftEntryKit into an Objective-C project us
 
 [This project](https://github.com/huri000/ObjcEntryKitExample) demonstrates that using Carthage and CocoaPods.  
 
-## Author
-
-Daniel Huri, huri000@gmail.com
-
-## Donations
-
-Donations can be made by sending either Bitcoin or Ether to the following addresses.
-
-| BTC | ETH |
-| :---: | :---: | 
-| 134TiBiUvVNt7Na5KXEFBSChLdgVDw1Hnr | 0xAe6616181FCdde4793AE749Ce21Cd5Af9333A3E2 |
-| ![btc_address](https://github.com/huri000/assets/blob/master/donate/btc-address.png) | ![eth_address](https://github.com/huri000/assets/blob/master/donate/eth-address.png) |
-
 ## Thank You
 
 Thanks Lily Azar, lilushkaa@gmail.com for those awesome preset icons. 
