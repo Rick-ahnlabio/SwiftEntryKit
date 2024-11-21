@@ -254,10 +254,7 @@ final class EKWindowProvider: EntryPresenterDelegate {
     
     /** Dismiss entries according to a given descriptor */
     func dismiss(_ descriptor: SwiftEntryKit.EntryDismissalDescriptor, with completion: SwiftEntryKit.DismissCompletionHandler? = nil) {
-        guard let rootVC = rootVC else {
-            completion?()
-            return
-        }
+        guard let rootVC else { return }
         
         switch descriptor {
         case .displayed:
