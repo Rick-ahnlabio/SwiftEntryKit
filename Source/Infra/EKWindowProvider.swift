@@ -60,6 +60,20 @@ final class EKWindowProvider: EntryPresenterDelegate {
         switch descriptor {
         case .displayed:
             topMostProvider?.rootVC?.animateOutLastEntry(completionHandler: completion)
+        case .all:
+            let dispatchGroup = DispatchGroup()
+            providers.values.forEach { provider in
+                provider.entryQueue.removeAll()
+                
+                if let rootVC = provider.rootVC {
+                    dispatchGroup.enter()
+                    rootVC.animateOutLastEntry {
+                        dispatchGroup.leave()
+                    }
+                }
+            }
+            dispatchGroup.notify(queue: .main, execute: completion ?? {})
+            
         default:
             let targets: [EKWindowProvider]
             if case .specific(let name) = descriptor {
